@@ -12,7 +12,7 @@ The design question was not "how do we generate a message?" but **"how do we let
 
 Here is the clickable prototype:
 
-<!-- Paste the video link (https://github.com/user-attachments/assets/...) on its own line below this comment, then delete this comment -->
+https://github.com/user-attachments/assets/66338bc1-1ba2-4a39-888d-5750e636d4ca
 
 ## Key Features
 
