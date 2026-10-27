@@ -7,7 +7,7 @@ A mobile product design case study: an assistant that writes follow-up messages 
 - **Role:** Product design (UX, UI, AI behaviour design) — Lim Win Hoong
 - **Tools:** Figma (design + clickable prototype), Claude (AI rules + testing)
 - **Status:** Clickable prototype + tested AI rules. Not a live app.
-- **Demo:** `demo/ai-sales-followup-prototype.mp4`
+- **Demo:** [Watch the prototype demo](ai-sales-followup-prototype.mp4)
 
 ---
 
@@ -55,10 +55,10 @@ Every result is also labelled **"AI draft — please review before sending"**.
 | 03A | Missing information | Lists exactly what is missing, with a way back to the form |
 | 03B | Confirm before copy | Checklist: name, amount, tone. "Back and check" is the primary action; "Copy anyway" is deliberately secondary |
 
-![Input](assets/01-input.png)
-![Result](assets/02-result.png)
-![Missing info](assets/03a-missing.png)
-![Confirm before copy](assets/03b-confirm.png)
+![Input](01-input.png)
+![Result](02-result.png)
+![Missing info](03a-missing.png)
+![Confirm before copy](03b-confirm.png)
 
 ## 5. AI behaviour rules (prompt)
 
@@ -82,13 +82,17 @@ NEXT FOLLOW-UP: [date] — [one-line reason]
 
 ## 6. Testing
 
-I tested the rules with three customer situations (screenshots in `assets/`).
+I tested the rules with three customer situations (screenshots below the table).
 
 | Test | Input | Expected | Result |
 |---|---|---|---|
 | A. Normal | Sarah Chen, Premium Plan, RM12,000, offer "10% off first year", Friendly | Correct name, price and offer only | **Pass.** Name, RM12,000 and 10% correct; no extra offers. Next follow-up Mon 2 Nov (today was Wed 28 Oct) |
 | B. Missing data | Quote amount empty | Refuse to write; list what is missing | **Pass.** Output: "Missing required information: Quote Amount" |
 | C. Price objection, no offer entered | Ahmad Rizal, Starter Plan, RM3,500, no offer, "Said it's too expensive" | No invented discount | **Pass.** Acknowledged the price concern and asked what matters most, with no discount or made-up number |
+
+![Test A](test-a.png)
+![Test B](test-b.png)
+![Test C](test-c.png)
 
 ### What changed because of testing and review
 
@@ -114,7 +118,7 @@ I tested the rules with three customer situations (screenshots in `assets/`).
 
 ```
 README.md
-assets/       screenshots (design screens + test results)
-demo/         prototype screen recording
-prompt.txt    AI rules (section 5)
+01-input.png ... 03b-confirm.png   design screens
+test-a.png, test-b.png, test-c.png  AI test results
+ai-sales-followup-prototype.mp4     prototype screen recording
 ```
